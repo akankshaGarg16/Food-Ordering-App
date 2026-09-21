@@ -49,7 +49,7 @@ const Body = () => {
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
+    <div className="body py-21">
       <div className="filter flex">
         <div className="search m-4 p-4">
           <input

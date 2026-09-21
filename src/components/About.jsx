@@ -18,7 +18,7 @@ class About extends Component {
     //console.log("Parent Render");
 
     return (
-      <div>
+      <div className=" py-25">
         <h1>About Class Component</h1>
         <div>
           LoggedIn User
