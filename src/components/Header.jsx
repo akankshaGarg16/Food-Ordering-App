@@ -16,9 +16,9 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
+    <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50 z-1000 fixed w-full">
       <div className="logo-container">
-        <img className="w-30" src={LOGO_URL} />
+        <img className="w-20 mx-2 py-2" src={LOGO_URL} />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
@@ -35,7 +35,7 @@ const Header = () => {
           <li className="px-4">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="px-4 font-bold text-xl">
+          <li className="px-4">
             <Link to="/cart">Cart - ({cartItems.length} items)</Link>
           </li>
           <button
