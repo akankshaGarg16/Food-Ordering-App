@@ -16,21 +16,17 @@ const RestaurantMenu = () => {
   if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[0]?.card?.card?.info;
-
-  const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    resInfo?.cards[2]?.card?.card?.info;
 
   const categories =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  //console.log(categories);
 
   return (
-    <div className="text-center">
+    <div className="text-center py-25">
       <h1 className="font-bold my-6 text-2xl">{name}</h1>
       <p className="font-bold text-lg">
         {cuisines.join(", ")} - {costForTwoMessage}

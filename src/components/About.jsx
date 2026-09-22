@@ -7,19 +7,12 @@ class About extends Component {
   constructor(props) {
     super(props);
 
-    //console.log("Parent Constructor");
   }
 
-  componentDidMount() {
-    //console.log("Parent Component Did Mount");
-  }
 
   render() {
-    //console.log("Parent Render");
-
     return (
-      <div className=" py-25">
-        <h1>About Class Component</h1>
+      <div className="py-25">
         <div>
           LoggedIn User
           <UserContext.Consumer>
@@ -28,7 +21,7 @@ class About extends Component {
             )}
           </UserContext.Consumer>
         </div>
-        <h2>This is Namaste React Web Series</h2>
+        <h2>This is dummy Food ordering app</h2>
         <UserClass name={"First"} location={"Kolkata Class"} />
       </div>
     );
